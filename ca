@@ -1,0 +1,56 @@
+函数 结果( )  {
+	重量 = 文件。getElementById （“重量” ）。价值；
+	高度 = 文件。getElementById （“高度” ）。价值；
+	getheight  = 高度 *  0.3048 ;  // 1 英尺 = 0.3048 米
+	getBMI  =  (体重 /Math.pow(getheight  , 2 ) ) 。_ _ _ _ _ 到固定（2 ）； 
+
+	如果 （getBMI  <=  18.4 ） {
+		showResults  =  "您的体重指数是"  +  getBMI ;
+		文件。querySelector （“.message” ）。风格。显示 =  “无” ；
+		文件。getElementById （“showUnderweight” ）。innerHTML  =  "结果：减持 😕" ;
+	}
+
+	如果 （获取体重指数 >=  18.5  && 获取体重指数 <=  24.9 ） {
+		showResults  =  "您的体重指数是"  +  getBMI ;
+		文件。querySelector （“.message” ）。风格。显示 =  “无” ；
+		文件。getElementById （“showNormal” ）。innerHTML  =  "结果：健康体重 " ;
+	}
+
+	如果 （获取体重指数 >=  25  && 获取体重指数 <=  29.9 ） {
+		showResults  =  "您的体重指数是"  +  getBMI ;
+		文件。querySelector （“.message” ）。风格。显示 =  “无” ；
+		文件。getElementById （“显示超重” ）。innerHTML  =  "结果：超重 😠" ;
+	}
+
+	如果 （getBMI  >=  30 ） {
+		showResults  =  "您的体重指数是"  +  getBMI ;
+		文件。querySelector （“.message” ）。风格。显示 =  “无” ；
+		文件。getElementById （“显示肥胖” ）。innerHTML  =  "结果：肥胖 😡" ;
+	}
+
+	如果 （（重量。长度 <=  0 ） ||  （高度。长度 <=  0 ）） {
+		文件。getElementById （“消息” ）。innerHTML  =  "注意：请输入您的确切身高和体重。" ;
+		文件。查询选择器（“.cards-2” ）。风格。显示 =  “无” ；
+		文件。查询选择器（“#showResult” ）。风格。显示 =  “无” ；
+	}
+
+	如果 （（体重 <  0 ） ||  （身高 <  0 ）） {
+		文件。getElementById （“消息” ）。innerHTML  =  "注意：身高和体重不能为负值。" ;
+		文件。查询选择器（“.cards-2” ）。风格。显示 =  “无” ；
+		文件。查询选择器（“#showResult” ）。风格。显示 =  “无” ；
+	}
+
+	如果 （（重量 ==  0 ） ||  （高度 ==  0 ）） {
+		文件。getElementById （“消息” ）。innerHTML  =  "注意：请输入您的确切身高和体重。" ;
+		文件。查询选择器（“.cards-2” ）。风格。显示 =  “无” ；
+		文件。查询选择器（“#showResult” ）。风格。显示 =  “无” ；
+	}
+
+	否则 {
+		文件。getElementById （“显示结果” ）。innerHTML  =  showResults ;
+	}
+
+	// 删除 [results] 按钮
+
+	文件。querySelector （“.reset” ）。风格。显示 =  “块” ；
+	文件。查询选择器（“.results” ）。风格。显示 =  “无” ；
